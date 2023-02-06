@@ -1,0 +1,189 @@
+@import "custom-variables.scss";
+@import "../bootstrap_5/scss/bootstrap.scss";
+@import "typeaheadjs";
+
+body{
+    max-width: map-get($container-max-widths,sm);
+    margin: auto;
+}
+
+.logo{
+    max-width: 150px;
+}
+
+/*.file-input{
+    border: 1px dashed $primary;
+    & input{
+        color: $primary !important;
+
+		&::-webkit-file-upload-button {
+			display: none;
+		}
+		&::file-selector-button {
+			display: none;
+		}
+    }
+    &:hover {
+		label {
+			cursor: pointer;
+		}
+	}
+}*/
+
+.file-input{
+    line-height: 1.15;
+    label {
+        color: $primary;
+        font-size: 1.25rem;
+        padding: 0 1.25rem;
+        border: 1px dashed $primary;
+        margin-bottom: 0;
+        width: 100%;
+        text-align: center;
+        cursor: pointer;
+    }
+    input{
+        width: 0.1px;
+        height: 0.1px;
+        opacity: 0;
+        overflow: hidden;
+        position: absolute;
+        z-index: -1;
+        &:focus ~ label{
+            box-shadow: $input-focus-box-shadow;
+        }
+    }
+    .icon-camera{
+        font-size: 3rem;
+    }
+}
+
+/*Fix for iOS*/
+input[type="date"] {
+    -webkit-appearance: textfield;
+    -moz-appearance: textfield;
+    appearance: textfield;
+    -webkit-align-items: start;
+    -moz-align-items: start;
+    align-items: start;
+    &::-webkit-date-and-time-value{
+    text-align: left;
+    }
+}
+
+.form-select {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+}
+
+
+#keyword{
+    & + .btn{
+        position: absolute;
+        right: 0;
+        top: 0;
+        height: 100%;
+        color: $link-color;
+    }
+}
+
+#viewAllReceipts{
+    & button, & a{
+        background: none;
+        border: none; 
+        font-size: 1.25rem;
+    }
+    & button:not(.delete), & a{
+        color: $link-color;
+    }
+    & button.delete{
+        color: $error-color;
+    }
+}
+
+.upload-success{
+    .success-message{
+        font-size: 4rem;
+        color:$success;
+    }
+}
+
+dd {
+    margin-bottom: 1rem;
+}
+
+.accordion-button {
+    &:not(.collapsed) {
+        background-color: $body-bg;
+    }
+}
+
+/*Typeahead in Bootstrap 5*/
+/*.form-floating {
+    > .twitter-typeahead {
+        > .form-control {
+            height: $form-floating-height;
+            line-height: $form-floating-line-height;
+
+            &::placeholder {
+                color: transparent;
+            }
+        }
+    }
+}*/
+.form-floating {
+    > .twitter-typeahead {
+        position: relative;
+        width: 100%;
+    
+        > .form-control,
+        > .form-select {
+        height: $form-floating-height;
+        line-height: $form-floating-line-height;
+        }
+    
+        + label {
+            position: absolute;
+            top: 0;
+            left: 0;
+            height: 100%; // allow textareas
+            padding: $form-floating-padding-y $form-floating-padding-x;
+            pointer-events: none;
+            border: $input-border-width solid transparent; // Required for aligning label's text with the input as it affects inner box model
+            transform-origin: 0 0;
+            @include transition($form-floating-transition);
+        }
+    
+        // stylelint-disable no-duplicate-selectors
+        > .form-control {
+            padding: $form-floating-padding-y $form-floating-padding-x;
+        
+            &::placeholder {
+                color: transparent;
+            }
+        
+            &:focus,
+            &:not(:placeholder-shown) {
+                padding-top: $form-floating-input-padding-t;
+                padding-bottom: $form-floating-input-padding-b;
+            }
+            // Duplicated because `:-webkit-autofill` invalidates other selectors when grouped
+            &:-webkit-autofill {
+                padding-top: $form-floating-input-padding-t;
+                padding-bottom: $form-floating-input-padding-b;
+            }
+        }
+    
+        > .form-select {
+        padding-top: $form-floating-input-padding-t;
+        padding-bottom: $form-floating-input-padding-b;
+        }
+        // stylelint-enable no-duplicate-selectors
+
+    }
+}
+
+.tt-menu{
+    width: inherit;
+}
+  

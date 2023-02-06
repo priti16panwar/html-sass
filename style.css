@@ -1,0 +1,125 @@
+
+.nav-section-top {
+    width: 100%;
+    float: left;
+    background: #067eb1;
+    padding: 0 10px;
+}
+.logout-nav {
+    text-align: right;
+    color: #Fff;
+    font-size: 16px;
+}
+.nav-seciton {
+    width: 100%;
+    float: left;
+    margin-bottom: 12px;
+}
+.nav-section-top .row {
+    display: flex;
+    align-items: center;
+}
+.offcanvas.show {
+    transform: none;
+    width: 262px;
+}
+.offcanvas-body ul li {
+    list-style: none;
+    padding: 11px 0;
+
+}
+.offcanvas-body ul li a {
+    font-size: 18px;text-decoration:none;
+}
+
+.offcanvas-body ul {
+    padding:0;
+}
+.offcanvas-body svg{
+   margin-right:10px;
+}
+.company-name {
+    text-align: 18px;
+    text-align: center;
+    font-size: 18px;
+    border-bottom: solid 1px #7e7575;
+    padding-bottom: 6px;
+    margin-bottom: 15px;
+}
+tr.even {
+    background: #ebebeb;
+}
+
+.btn-check:focus+.btn-primary, .btn-primary:focus, .btn-primary:hover {
+    background-color: none !important;
+    border-color: none !important;
+    color: #fff;
+}
+
+.up-load-receipt {
+    text-align: center;
+    /* text-decoration: none; */
+}
+.up-load-receipt a {
+    text-decoration: none;
+    font-weight: bold;
+}
+table#viewAllReceipts td {
+    font-size: 14px;
+}
+.sure-want {
+    font-size: 14px;
+    margin-bottom: 12px;
+}
+.ac-company {
+    font-size: 14px;
+    font-weight: 600;	
+}
+.yno {
+    font-size: 14px;
+}
+.account-heading {
+    width: 100%;
+    float: left;
+    margin-bottom: 12px;
+}
+.modal-footer {
+    display: initial !important;
+    text-align: center;
+}
+.modal-footer button.btn {
+    width: 24%; margin:0 auto;
+}
+.view-receipt {
+ padding-bottom: 10px;
+    font-size: 32px;
+    color: #000;
+    border-bottom: solid 1px #a59393;
+}
+#exampleModalu .modal-body {
+    color: #fff;
+    background: #15A084;
+}
+
+#exampleModalu button.btn-close {
+    position: absolute;
+    right: 14px;
+    bottom: 19px;
+    color: #fff;
+}
+
+.green-bar {
+    width: 100%;
+    float: left;
+}
+.green-bar {
+    width: 100%;
+    float: left;
+    color: #067EB1;
+    font-size: 18px;
+}
+
+
+
+
+
